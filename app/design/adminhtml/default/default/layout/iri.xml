@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_customer_edit>
+        <reference name="customer_edit_tabs">
+          <action method="addTab"><name>customer_edit_tab_credit</name><block>iri/adminhtml_customer_edit_tab_credit</block></action>
+        </reference>
+         <reference name="js">
+            <block type="adminhtml/template"  name="iri.js" as="customer_js">
+               <action method="setTemplate" ifconfig="payment/iri/active">
+                         <template>iri/js.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </adminhtml_customer_edit>
+</layout>
