@@ -45,7 +45,7 @@ class Wsu_IRI_Model_Observer {
         $method = $event->getMethodInstance();
         $result = $event->getResult();
         $quote  = $event->getQuote();
-        if ($method->getCode() == 'iri') {
+        if ($method->getCode() == 'iri' && $quote!=null) {
             $customerGroup               = $quote->getCustomerGroupId();
             $SelectedCustomerGroups      = Mage::getStoreConfig('payment/iri/specificcustomers');
             $SelectedCustomerGroupsArray = explode(",", $SelectedCustomerGroups);
