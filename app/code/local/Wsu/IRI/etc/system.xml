@@ -92,6 +92,7 @@
 							<can_be_empty>1</can_be_empty>
 							<depends>
 								<active>1</active>
+								<allowspecific>1</allowspecific>
 							</depends>
 						</specificcountry>
 				   
