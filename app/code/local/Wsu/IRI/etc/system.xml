@@ -81,21 +81,20 @@
 								<active>1</active>
 							</depends>
                         </allowspecific>
-							<specificcountry translate="label">
-								<label>Payment from Specific Countries</label>
-								<frontend_type>multiselect</frontend_type>
-								<sort_order>51</sort_order>
-								<source_model>adminhtml/system_config_source_country</source_model>
-								<show_in_default>1</show_in_default>
-								<show_in_website>1</show_in_website>
-								<show_in_store>0</show_in_store>
-								<can_be_empty>1</can_be_empty>
-								<depends>
-									<active>1</active>
-									<allowspecific>1</allowspecific>
-								</depends>
-							</specificcountry>
-                       
+						<specificcountry translate="label">
+							<label>Payment from Specific Countries</label>
+							<frontend_type>multiselect</frontend_type>
+							<sort_order>51</sort_order>
+							<source_model>adminhtml/system_config_source_country</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+							<depends>
+								<active>1</active>
+							</depends>
+						</specificcountry>
+				   
                          <allowcredit translate="label">
                             <label>Allow a credit limit to be used</label>
                             <frontend_type>allowspecific</frontend_type>
