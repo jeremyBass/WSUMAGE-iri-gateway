@@ -3,7 +3,7 @@
    <sections>
         <payment>
             <groups>
-                <iri translate="label">
+                <iri translate="label" module="iri">
                     <label>Interdepartmental Requisition Invoice (IRI) Payment</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>30</sort_order>
