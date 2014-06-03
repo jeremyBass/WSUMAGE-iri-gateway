@@ -5,9 +5,7 @@ class Wsu_IRI_Block_Adminhtml_Customer_Editcustomer extends Mage_Adminhtml_Block
         $form->setHtmlIdPrefix('_account');
         $form->setFieldNameSuffix('account');
         $customer = Mage::registry('current_customer');
-        /** added by IndiaNIC ***/
         $customer->getCreditLimit();
-        /** added by IndiaNIC ***/
         /** @var $customerForm Mage_Customer_Model_Form */
         $customerForm = Mage::getModel('customer/form');
         $customerForm->setEntity($customer)->setFormCode('adminhtml_customer')->initDefaultValues();
