@@ -91,6 +91,15 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
                         </max_order_total>
+                        <limit_message translate="label comment">
+                            <label>Limit Message</label>
+							<comment><![CDATA[ This is the custom message when a customer meets the set credit limit.  ]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </limit_message>
                         <model>
                         </model>
                     </fields>

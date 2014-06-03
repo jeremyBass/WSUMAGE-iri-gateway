@@ -16,7 +16,8 @@ class Wsu_IRI_Model_Checkout_Type_Onepage extends Mage_Checkout_Model_Type_Onepa
         if ($data['method'] == "iri" && $creditLimit < $_grand) {
             /* return array('error' => '-1', 'message' => Mage::helper('checkout')->__("You don't have sufficient credit balance. "));*/
             //Mage::throwException
-            Mage::throwException(Mage::helper('checkout')->__("You don't have sufficient credit."));
+			$limit_message=Mage::getStoreConfig('payment/iri/limit_message');
+            Mage::throwException( ( $limit_message!="" ? $limit_message : Mage::helper('checkout')->__("You don't have sufficient credit.") ) );
         }
         if ($quote->isVirtual()) {
             $quote->getBillingAddress()->setPaymentMethod(isset($data['method']) ? $data['method'] : null);
