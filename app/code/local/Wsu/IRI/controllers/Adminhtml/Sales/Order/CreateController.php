@@ -363,7 +363,7 @@ class Wsu_IRI_Adminhtml_Sales_Order_CreateController extends Mage_Adminhtml_Sale
         }
     }
     /**
-     * Saving quote and create order   Added By IndiaNIC 
+     * Saving quote and create order 
      */
     public function saveAction() {
         try {
