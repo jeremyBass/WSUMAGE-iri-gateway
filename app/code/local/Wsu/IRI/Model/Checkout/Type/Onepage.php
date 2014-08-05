@@ -1,6 +1,6 @@
 <?php
 class Wsu_IRI_Model_Checkout_Type_Onepage extends Mage_Checkout_Model_Type_Onepage {
-    public function saveIrisimplement($data) {
+    public function savePayment($data) {
         if (empty($data)) {
             return array(
                 'error' => -1,
@@ -18,15 +18,15 @@ class Wsu_IRI_Model_Checkout_Type_Onepage extends Mage_Checkout_Model_Type_Onepa
             Mage::throwException( ( $limit_message!="" ? $limit_message : Mage::helper('checkout')->__("You don't have sufficient credit.") ) );
         }
         if ($quote->isVirtual()) {
-            $quote->getBillingAddress()->setIrisimplementMethod(isset($data['method']) ? $data['method'] : null);
+            $quote->getBillingAddress()->setPaymentMethod(isset($data['method']) ? $data['method'] : null);
         } else {
-            $quote->getShippingAddress()->setIrisimplementMethod(isset($data['method']) ? $data['method'] : null);
+            $quote->getShippingAddress()->setPaymentMethod(isset($data['method']) ? $data['method'] : null);
         }
         // shipping totals may be affected by payment method
         if (!$quote->isVirtual() && $quote->getShippingAddress()) {
             $quote->getShippingAddress()->setCollectShippingRates(true);
         }
-        $payment = $quote->getIrisimplement();
+        $payment = $quote->getPayment();
         $payment->importData($data);
         $quote->save();
         $this->getCheckout()->setStepData('payment', 'complete', true)->setStepData('review', 'allow', true);

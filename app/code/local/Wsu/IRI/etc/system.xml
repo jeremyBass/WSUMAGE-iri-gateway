@@ -4,7 +4,7 @@
         <payment>
             <groups>
                 <iri translate="label" module="iri">
-                    <label>Interdepartmental Requisition Invoice (IRI) Irisimplement</label>
+                    <label>Interdepartmental Requisition Invoice (IRI) Payment</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>30</sort_order>
                     <show_in_default>1</show_in_default>
@@ -70,7 +70,7 @@
 
                         
                          <allowspecific translate="label">
-                            <label>Irisimplement from Applicable Countries</label>
+                            <label>Payment from Applicable Countries</label>
                             <frontend_type>allowspecific</frontend_type>
                             <sort_order>50</sort_order>
                             <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
@@ -82,7 +82,7 @@
 							</depends>
                         </allowspecific>
 						<specificcountry translate="label">
-							<label>Irisimplement from Specific Countries</label>
+							<label>Payment from Specific Countries</label>
 							<frontend_type>multiselect</frontend_type>
 							<sort_order>51</sort_order>
 							<source_model>adminhtml/system_config_source_country</source_model>

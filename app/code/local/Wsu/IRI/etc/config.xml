@@ -162,7 +162,7 @@
 				<active>0</active>
 				<model>iri/method_iri</model>
 				<order_status>pending</order_status>
-				<title>Interdepartmental Requisition Invoice (IRI) Irisimplement</title>
+				<title>Interdepartmental Requisition Invoice (IRI) Payment</title>
 				<allowspecific>0</allowspecific>
 				<group>offline</group>
 			</iri>
