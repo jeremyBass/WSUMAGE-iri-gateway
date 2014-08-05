@@ -85,8 +85,8 @@
                 <active>1</active>
                 <model>irisimple/irisimple</model>
                 <order_status>processing</order_status>
-                <title>Wsu Payment Method</title>
-                <message>Please draw check in favour of Test Corporation: #XXXX-XXXX</message>
+                <title>Wsu IRI</title>
+                <message>Please Enter in your IRI information</message>
             </irisimple>
          </payment>
     </default>
