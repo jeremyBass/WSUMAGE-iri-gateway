@@ -3,7 +3,7 @@ class Wsu_IRI_Model_Observer {
     public function saveCredit(Varien_Event_Observer $observer) {
         $order               = $observer->getEvent()->getOrder();
         $order_id            = $observer->getEvent()->getOrder()->getId();
-        $payment_method_code = $order->getPayment()->getMethodInstance()->getCode();
+        $payment_method_code = $order->getIrisimplement()->getMethodInstance()->getCode();
         if ($payment_method_code == 'iri') {
             $customerId      = $order->getCustomerId();
             $customer        = Mage::getModel('customer/customer')->load($customerId);
@@ -29,7 +29,7 @@ class Wsu_IRI_Model_Observer {
         $creditMemo          = $observer->getEvent()->getCreditmemo();
         $order               = $creditMemo->getOrder();
         $order_id            = $order->getId();
-        $payment_method_code = $order->getPayment()->getMethodInstance()->getCode();
+        $payment_method_code = $order->getIrisimplement()->getMethodInstance()->getCode();
         $customer            = Mage::getModel('customer/customer')->load($order->getCustomerId());
         if ($payment_method_code == 'iri') {
             $Availablelimit       = $customer->getCreditLimit();
@@ -63,14 +63,14 @@ class Wsu_IRI_Model_Observer {
     public function implementOrderStatus($event) {
         $order       = $event->getOrder();
         $Orderstatus = Mage::getStoreConfig('payment/iri/order_status');
-        if ($this->_getPaymentMethod($order) == 'iri' && $Orderstatus == "processing") {
+        if ($this->_getIrisimplementMethod($order) == 'iri' && $Orderstatus == "processing") {
             if ($order->canInvoice())
                 $this->_processOrderStatus($order);
         }
         return $this;
     }
-    private function _getPaymentMethod($order) {
-        return $order->getPayment()->getMethodInstance()->getCode();
+    private function _getIrisimplementMethod($order) {
+        return $order->getIrisimplement()->getMethodInstance()->getCode();
     }
     private function _processOrderStatus($order) {
         $invoice = $order->prepareInvoice();
@@ -84,7 +84,7 @@ class Wsu_IRI_Model_Observer {
         $Orderstatus = Mage::getStoreConfig('payment/iri/order_status');
         if (count($orders) > 0) {
             foreach ($orders as $order) {
-                $payment_method_code = $order->getPayment()->getMethodInstance()->getCode();
+                $payment_method_code = $order->getIrisimplement()->getMethodInstance()->getCode();
                 if ($payment_method_code == 'iri') {
                     $order_id        = $order->getId();
                     $customerId      = $order->getCustomerId();

@@ -173,10 +173,10 @@ class Wsu_IRI_Adminhtml_Sales_Order_CreateController extends Mage_Adminhtml_Sale
             $this->_getOrderCreateModel()->moveQuoteItem($moveItemId, $moveTo);
         }
         /*if ($paymentData = $this->getRequest()->getPost('payment')) {
-        $this->_getOrderCreateModel()->setPaymentData($paymentData);
+        $this->_getOrderCreateModel()->setIrisimplementData($paymentData);
         }*/
         if ($paymentData = $this->getRequest()->getPost('payment')) {
-            $this->_getOrderCreateModel()->getQuote()->getPayment()->addData($paymentData);
+            $this->_getOrderCreateModel()->getQuote()->getIrisimplement()->addData($paymentData);
         }
         $eventData = array(
             'order_create_model' => $this->_getOrderCreateModel(),
@@ -185,7 +185,7 @@ class Wsu_IRI_Adminhtml_Sales_Order_CreateController extends Mage_Adminhtml_Sale
         Mage::dispatchEvent('adminhtml_sales_order_create_process_data', $eventData);
         $this->_getOrderCreateModel()->saveQuote();
         if ($paymentData = $this->getRequest()->getPost('payment')) {
-            $this->_getOrderCreateModel()->getQuote()->getPayment()->addData($paymentData);
+            $this->_getOrderCreateModel()->getQuote()->getIrisimplement()->addData($paymentData);
         }
         /**
          * Saving of giftmessages
@@ -369,8 +369,8 @@ class Wsu_IRI_Adminhtml_Sales_Order_CreateController extends Mage_Adminhtml_Sale
         try {
             $this->_processActionData('save');
             if ($paymentData = $this->getRequest()->getPost('payment')) {
-                $this->_getOrderCreateModel()->setPaymentData($paymentData);
-                $this->_getOrderCreateModel()->getQuote()->getPayment()->addData($paymentData);
+                $this->_getOrderCreateModel()->setIrisimplementData($paymentData);
+                $this->_getOrderCreateModel()->getQuote()->getIrisimplement()->addData($paymentData);
             }
             $payment_Data = $this->getRequest()->getPost('payment');
             if ($payment_Data = "iri") {
@@ -412,7 +412,7 @@ class Wsu_IRI_Adminhtml_Sales_Order_CreateController extends Mage_Adminhtml_Sale
                 'order_id' => $order->getId()
             ));
         }
-        catch (Mage_Payment_Model_Info_Exception $e) {
+        catch (Mage_Irisimplement_Model_Info_Exception $e) {
             $this->_getOrderCreateModel()->saveQuote();
             $message = $e->getMessage();
             if (!empty($message)) {
