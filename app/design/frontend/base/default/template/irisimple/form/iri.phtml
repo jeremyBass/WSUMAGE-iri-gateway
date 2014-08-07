@@ -1,5 +1,6 @@
 <?php $_code=$this->getMethodCode() ?>
 <ul class="form-list" id="payment_form_<?php echo $_code ?>" style="display:none;">
+	<li><?php echo $this->getMethod()->getConfigData('message');?></li>
     <li>
         <label for="<?php echo $_code ?>_iri_zip" class="required"><em>*</em><?php echo $this->__('Campus Zip') ?></label>
         <span class="input-box">
@@ -13,6 +14,3 @@
         </span>
     </li>
 </ul>
-<div>
-	<?php echo $this->getMethod()->getConfigData('message');?>
-</div>
