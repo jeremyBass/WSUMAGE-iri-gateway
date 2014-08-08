@@ -1,5 +1,5 @@
 <?php
-class Wsu_IRI_Model_Method_IRI extends Mage_Payment_Model_Method_Abstract {
+class Wsu_Iri_Model_Method_Iri extends Mage_Payment_Model_Method_Abstract {
     protected $_code = 'iri';
     /*protected $_isInitializeNeeded = true;
     protected $_canUseInternal = true;

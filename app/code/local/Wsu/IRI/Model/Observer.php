@@ -1,5 +1,5 @@
 <?php
-class Wsu_IRI_Model_Observer {
+class Wsu_Iri_Model_Observer {
     public function saveCredit(Varien_Event_Observer $observer) {
         $order               = $observer->getEvent()->getOrder();
         $order_id            = $observer->getEvent()->getOrder()->getId();

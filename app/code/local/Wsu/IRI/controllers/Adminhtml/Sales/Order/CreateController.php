@@ -1,6 +1,6 @@
 <?php
 require_once 'Mage/Adminhtml/controllers/Sales/Order/CreateController.php'; // fix that.. 
-class Wsu_IRI_Adminhtml_Sales_Order_CreateController extends Mage_Adminhtml_Sales_Order_CreateController {
+class Wsu_Iri_Adminhtml_Sales_Order_CreateController extends Mage_Adminhtml_Sales_Order_CreateController {
     /**
      * Additional initialization
      *

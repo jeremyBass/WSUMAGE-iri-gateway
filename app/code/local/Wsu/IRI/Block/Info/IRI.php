@@ -1,6 +1,6 @@
 <?php
 
-class Mage_Payment_Block_Info_IRI extends Mage_Payment_Block_Info
+class Mage_Payment_Block_Info_Iri extends Mage_Payment_Block_Info
 {
     /**
      * Retrieve credit card type name

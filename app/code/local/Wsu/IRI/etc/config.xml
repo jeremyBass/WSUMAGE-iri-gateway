@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <config>
 	<modules>
-		<Wsu_IRI>
+		<Wsu_Iri>
 			<version>0.1.0</version>
-		</Wsu_IRI>
+		</Wsu_Iri>
 	</modules>
 	<global>
 		<helpers>
 			<iri>
-				<class>Wsu_IRI_Helper</class>
+				<class>Wsu_Iri_Helper</class>
 			</iri>
 		</helpers>
 		<models>
 			<iri>
-				<class>Wsu_IRI_Model</class>
+				<class>Wsu_Iri_Model</class>
 				<resourceModel>iri_mysql4</resourceModel>
 			</iri>
 			<iri_mysql4>
-				<class>Wsu_IRI_Model_Mysql4</class>
+				<class>Wsu_Iri_Model_Mysql4</class>
 				<entities>
 					<iri>
 						<table>customers_credit_applied</table>
@@ -26,20 +26,20 @@
 			</iri_mysql4>
 			<checkout>
 				<rewrite>
-					<type_onepage>Wsu_IRI_Model_Checkout_Type_Onepage</type_onepage>
-					<type_multishipping>Wsu_IRI_Model_Checkout_Type_Multishipping</type_multishipping>
+					<type_onepage>Wsu_Iri_Model_Checkout_Type_Onepage</type_onepage>
+					<type_multishipping>Wsu_Iri_Model_Checkout_Type_Multishipping</type_multishipping>
 				</rewrite>
 			</checkout>
 			<customer>
 				<rewrite>
-					<customer>Wsu_IRI_Model_Customer</customer>
+					<customer>Wsu_Iri_Model_Customer</customer>
 				</rewrite>
 			</customer>
 		</models>
 		<resources>
 			<iri_setup>
 				<setup>
-					<module>Wsu_IRI</module>
+					<module>Wsu_Iri</module>
 					<class>Mage_Eav_Model_Entity_Setup</class>
 				</setup>
 				<connection>
@@ -59,11 +59,11 @@
 		</resources>
 		<blocks>
 			<iri>
-				<class>Wsu_IRI_Block</class>
+				<class>Wsu_Iri_Block</class>
 			</iri>
 			<adminhtml>
 				<rewrite>
-					<customer_edit_tab_account>Wsu_IRI_Block_Adminhtml_Customer_Editcustomer</customer_edit_tab_account>
+					<customer_edit_tab_account>Wsu_Iri_Block_Adminhtml_Customer_Editcustomer</customer_edit_tab_account>
 				</rewrite>
 			</adminhtml>
 		</blocks>
@@ -73,7 +73,7 @@
 			<iri>
 				<use>standard</use>
 				<args>
-					<module>Wsu_IRI</module>
+					<module>Wsu_Iri</module>
 					<frontName>iri</frontName>
 				</args>
 			</iri>
@@ -83,7 +83,7 @@
 				<observers>
 					<checkout_save_order_Credit>
 						<type>singleton</type>
-						<class>Wsu_IRI_Model_Observer</class>
+						<class>Wsu_Iri_Model_Observer</class>
 						<method>saveCredit</method>
 					</checkout_save_order_Credit>
 				</observers>
@@ -92,7 +92,7 @@
 				<observers>
 					<checkout_save_multi_order_Credit>
 						<type>singleton</type>
-						<class>Wsu_IRI_Model_Observer</class>
+						<class>Wsu_Iri_Model_Observer</class>
 						<method>saveMultiCredit</method>
 					</checkout_save_multi_order_Credit>
 				</observers>
@@ -101,7 +101,7 @@
 				<observers>
 					<checkout_payment_available>
 						<type>singleton</type>
-						<class>Wsu_IRI_Model_Observer</class>
+						<class>Wsu_Iri_Model_Observer</class>
 						<method>isAvailable</method>
 					</checkout_payment_available>
 				</observers>
@@ -110,7 +110,7 @@
 				<observers>
 					<auto_invoice_order>
 						<type>singleton</type>
-						<class>Wsu_IRI_Model_Observer</class>
+						<class>Wsu_Iri_Model_Observer</class>
 						<method>implementOrderStatus</method>
 					</auto_invoice_order>
 				</observers>
@@ -135,11 +135,11 @@
 		<events>
 			<sales_order_creditmemo_refund>
 				<observers>
-					<Wsu_IRI_Updated>
+					<Wsu_Iri_Updated>
 						<type>singleton</type>
-						<class>Wsu_IRI_Model_Observer</class>
+						<class>Wsu_Iri_Model_Observer</class>
 						<method>revertCredit</method>
-					</Wsu_IRI_Updated>
+					</Wsu_Iri_Updated>
 				</observers>
 			</sales_order_creditmemo_refund>
 		</events>
@@ -149,7 +149,7 @@
 			<adminhtml>
 				<args>
 					<modules>
-						<Wsu_IRI_Adminhtml before="Mage_Adminhtml">Wsu_IRI_Adminhtml</Wsu_IRI_Adminhtml>
+						<Wsu_Iri_Adminhtml before="Mage_Adminhtml">Wsu_Iri_Adminhtml</Wsu_Iri_Adminhtml>
 					</modules>
 				</args>
 			</adminhtml>
@@ -162,7 +162,7 @@
 				<active>0</active>
 				<model>iri/method_iri</model>
 				<order_status>pending</order_status>
-				<title>Interdepartmental Requisition Invoice (IRI) Payment</title>
+				<title>Interdepartmental Requisition Invoice (Iri) Payment</title>
 				<allowspecific>0</allowspecific>
 				<group>offline</group>
 			</iri>

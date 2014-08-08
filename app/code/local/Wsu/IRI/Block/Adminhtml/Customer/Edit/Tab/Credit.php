@@ -1,5 +1,5 @@
 <?php
-class Wsu_IRI_Block_Adminhtml_Customer_Edit_Tab_Credit extends Mage_Adminhtml_Block_Template implements Mage_Adminhtml_Block_Widget_Tab_Interface {
+class Wsu_Iri_Block_Adminhtml_Customer_Edit_Tab_Credit extends Mage_Adminhtml_Block_Template implements Mage_Adminhtml_Block_Widget_Tab_Interface {
     public function __construct() {
         $this->setTemplate('iri/iri.phtml');
     }

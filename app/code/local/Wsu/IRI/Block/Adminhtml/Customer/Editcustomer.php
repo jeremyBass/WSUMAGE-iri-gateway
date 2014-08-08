@@ -1,5 +1,5 @@
 <?php
-class Wsu_IRI_Block_Adminhtml_Customer_Editcustomer extends Mage_Adminhtml_Block_Customer_Edit_Tab_Account {
+class Wsu_Iri_Block_Adminhtml_Customer_Editcustomer extends Mage_Adminhtml_Block_Customer_Edit_Tab_Account {
     public function initForm() {
         $form = new Varien_Data_Form();
         $form->setHtmlIdPrefix('_account');

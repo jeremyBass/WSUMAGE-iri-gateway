@@ -1,5 +1,5 @@
 <?php
-class Wsu_IRI_Model_Checkout_Type_Onepage extends Mage_Checkout_Model_Type_Onepage {
+class Wsu_Iri_Model_Checkout_Type_Onepage extends Mage_Checkout_Model_Type_Onepage {
     public function savePayment($data) {
         if (empty($data)) {
             return array(

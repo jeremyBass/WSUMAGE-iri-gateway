@@ -1,6 +1,6 @@
 <?php
 
-class Wsu_IRI_Model_Checkout_Type_Multishipping extends Mage_Checkout_Model_Type_Multishipping {
+class Wsu_Iri_Model_Checkout_Type_Multishipping extends Mage_Checkout_Model_Type_Multishipping {
     public function setPaymentMethod($payment) {
         if (!isset($payment['method'])) {
             Mage::throwException(Mage::helper('checkout')->__('Payment method is not defined'));
