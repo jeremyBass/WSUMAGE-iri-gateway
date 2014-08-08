@@ -73,7 +73,7 @@
 			<iri>
 				<use>standard</use>
 				<args>
-					<module>Excellence_IRI</module>
+					<module>Wsu_IRI</module>
 					<frontName>iri</frontName>
 				</args>
 			</iri>

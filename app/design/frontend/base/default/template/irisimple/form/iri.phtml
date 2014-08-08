@@ -1,0 +1,16 @@
+<?php $_code=$this->getMethodCode() ?>
+<ul class="form-list" id="payment_form_<?php echo $_code ?>" style="display:none;">
+	<li><?php echo $this->getMethod()->getConfigData('message');?></li>
+    <li>
+        <label for="<?php echo $_code ?>_iri_zip" class="required"><em>*</em><?php echo $this->__('Campus Zip') ?></label>
+        <span class="input-box">
+            <input type="text" title="<?php echo $this->__('Campus Zip') ?>" class="input-text required-entry" id="<?php echo $_code ?>_iri_zip" name="payment[iri_zip]" value="<?php echo $this->htmlEscape($this->getInfoData('iri_zip')) ?>" />
+        </span>
+    </li>
+    <li>
+        <label for="<?php echo $_code ?>_iri_dep" class="required"><em>*</em><?php echo $this->__('Department Information:') ?></label>
+        <span class="input-box">
+            <input type="text" title="<?php echo $this->__('Department Information:') ?>" class="input-text required-entry" id="<?php echo $_code ?>_iri_dep" name="payment[iri_dep]" value="<?php echo $this->htmlEscape($this->getInfoData('iri_dep')) ?>" />
+        </span>
+    </li>
+</ul>

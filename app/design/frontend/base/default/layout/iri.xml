@@ -11,4 +11,13 @@
                     
         </reference>
     </customer_account_index>
+	
+	
+    <irisimple_index_index>
+        <reference name="content">
+            <block type="irisimple/iri" name="irisimple" template="irisimple/iri.phtml" />
+        </reference>
+    </irisimple_index_index>
+	
+	
 </layout>
