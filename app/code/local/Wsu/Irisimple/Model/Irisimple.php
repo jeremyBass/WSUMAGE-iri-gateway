@@ -34,11 +34,12 @@ class Wsu_Irisimple_Model_Irisimple extends Mage_Payment_Model_Method_Abstract {
 
 		$zip = $info->getIriZip();
 		$dep = $info->getIriDep();
+		$errorMsg="";
 		if(empty($zip) || empty($dep)){
 			$errorCode = 'invalid_data';
 			$errorMsg = $this->_getHelper()->__('Campus Zip and Department Information are required fields');
 		}
-		if($errorMsg){
+		if($errorMsg!=""){
 			Mage::throwException($errorMsg);
 		}
 		return $this;
