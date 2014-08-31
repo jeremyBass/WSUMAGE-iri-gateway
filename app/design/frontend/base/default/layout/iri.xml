@@ -3,21 +3,15 @@
 <layout version="0.1.0">
     <customer_account_index>
         <reference name="customer_account_dashboard">
-      
-            <action method="setTemplate"><template>iri/customer/account/dashboard.phtml</template></action>
-           <reference name="customer_account_dashboard">  
-             <block type="customer/account_dashboard" name="customer_account_dashboard_credit" as="credit" template="iri/customer/iri.phtml"/>
-        </reference>
-                    
+			<action method="setTemplate" ifconfig="payment/iri/allowcredit"><template>iri/customer/account/dashboard.phtml</template></action>
+			<reference name="customer_account_dashboard">  
+				<block type="customer/account_dashboard" name="customer_account_dashboard_credit" as="credit" template="iri/customer/iri.phtml"/>
+			</reference>
         </reference>
     </customer_account_index>
-	
-	
     <irisimple_index_index>
         <reference name="content">
             <block type="irisimple/iri" name="irisimple" template="irisimple/iri.phtml" />
         </reference>
     </irisimple_index_index>
-	
-	
 </layout>
