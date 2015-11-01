@@ -1,5 +1,5 @@
 <?php
-
+require_once(Mage::getModuleDir('Model','Mage_Checkout').DS.'Model'.DS.'Type'.DS.'Multishipping.php');
 class Wsu_Iri_Model_Checkout_Type_Multishipping extends Mage_Checkout_Model_Type_Multishipping {
     public function setPaymentMethod($payment) {
         if (!isset($payment['method'])) {
